@@ -1,0 +1,95 @@
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+
+    background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+
+    color:white;
+
+    /* IMPORTANT FOR SCROLL */
+    height:auto;
+    overflow-y:auto;
+    scroll-behavior:smooth;
+}
+
+/* REMOVE ANY overflow:hidden from anywhere in your project */
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+.container{
+    width:90%;
+    margin:100px auto 40px;
+}
+
+.container h1{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+/* Cards */
+.card-grid{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:25px;
+    margin-bottom:60px;
+}
+
+.card{
+    height:420px;
+    border-radius:20px;
+    padding:25px;
+    background:#1e1e2f;
+    box-shadow:0 12px 25px rgba(0,0,0,0.5);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    background:#2a2a40;
+}
+
+.card-content h2{
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.card-content ul{
+    padding-left:20px;
+}
+
+.card-content ul li{
+    margin:10px 0;
+}
+
+.card-content ul li a{
+    text-decoration:none;
+    color:#e0e0e0;
+}
+
+.card-content ul li a:hover{
+    color:#ffd700;
+}
+
+/* Notes section */
+.notes-section{
+    background:#f5f5f5;
+    color:black;
+    padding:40px 20px;
+    border-radius:20px;
+}
+
+/* IMPORTANT: give enough space */
+.section{
+    background:white;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:10px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
