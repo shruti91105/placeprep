@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlacePrep Pro - Placement Preparation App</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- SPLASH SCREEN -->
+    <div id="splash">
+        <h1 class="project-name">PlacePrep Pro</h1>
+        <h2 class="project-name">prepare smart get hired</h2>
+
+        <!-- Animated blobs -->
+        <div class="blob"></div>
+        <div class="blob"></div>
+        <div class="blob"></div>
+    </div>
+
+    <!-- HOME PAGE -->
+    <div class="home">
+        <div class="home-content">
+
+            <nav class="navbar">
+                <div class="logo">PlacePrep Pro</div>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="aptitude.html">Notes</a></li>
+                    <li><a href="quiz-options.html">Quiz</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+
+            <section class="hero">
+                <h1>Prepare Smart. <span>Get Hired.</span></h1>
+                <p>
+                    Your complete placement preparation platform for aptitude,
+                    coding practice, mock tests and interview preparation.
+                </p>
+                <button class="primary-btn" onclick="openChat()">Start Preparation</button>
+            </section>
+
+            <div id="chatbox" style="display:none;">
+                <h2>Ask Anything</h2>
+                <input type="text" id="userInput" placeholder="Type your question..." />
+                <button onclick="sendQuestion()">Send</button>
+                <div id="response"></div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        window.onload = function () {
+            setTimeout(() => {
+                document.getElementById("splash").style.display = "none";
+                document.querySelector(".home").style.display = "block";
+            }, 2000);
+        };
+    </script>
+    <!-- External JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

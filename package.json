@@ -1,0 +1,29 @@
+{
+  "name": "4028project26",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000p\u0000l\u0000a\u0000c\u0000e\u0000p\u0000r\u0000e\u0000p\u0000-\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shruti91105/placeprep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shruti91105/placeprep/issues"
+  },
+  "homepage": "https://github.com/shruti91105/placeprep#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.2",
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mysql2": "^3.20.0"
+  }
+}

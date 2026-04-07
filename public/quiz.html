@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Quiz - PlacePrep Pro</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+            background-size: 400% 400%;
+            animation: gradientMove 10s ease infinite;
+
+            height: auto;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+
+        /* White Container */
+        .quiz-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-top: 100px;
+        }
+
+        .quiz-box {
+            background: white;
+            width: 1400px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+
+        /* Hide all sections */
+        .section {
+            display: none;
+        }
+
+        .section p {
+            padding-top: 15px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            background: #667eea;
+            color: white;
+            cursor: pointer;
+        }
+
+        h2 {
+            font-size: 40px;
+            text-align: center;
+            padding: 20px 0;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">PlacePrep Pro</div>
+    </nav>
+
+    <div class="quiz-wrapper">
+        <div class="quiz-box">
+
+            <form id="quizForm">
+
+                <!-- APTITUDE -->
+                <div id="aptitude" class="section">
+                    <h2>Aptitude Test</h2>
+
+                    <p>1. 2 + 2 = ?</p>
+                    <input type="radio" name="q1" value="4">4<br>
+                    <input type="radio" name="q1" value="3">3<br>
+                    <input type="radio" name="q1" value="1">1<br>
+                    <input type="radio" name="q1" value="5">5<br>
+                    <p>2. 106 x 106 - 94 x 94 = ?</p>
+                    <input type="radio" name="q2" value="2400">2400<br>
+                    <input type="radio" name="q2" value="2000">2000<br>
+                    <input type="radio" name="q2" value="1904">1904<br>
+                    <input type="radio" name="q2" value="1906">1906<br>
+                    <p>3. How many natural numbers are there between 23 and 100 which are exactly divisible by 6 ?</p>
+                    <input type="radio" name="q3" value="8">8<br>
+                    <input type="radio" name="q3" value="11">11<br>
+                    <input type="radio" name="q3" value="12">12<br>
+                    <input type="radio" name="q3" value="13">13<br>
+                    <p>4. A number when divide by 6 leaves a remainder 3. When the square of the number is divided by 6,
+                        the remainder is:</p>
+                    <input type="radio" name="q4" value="0">0<br>
+                    <input type="radio" name="q4" value="1">1<br>
+                    <input type="radio" name="q4" value="2">2<br>
+                    <input type="radio" name="q4" value="3">3<br>
+                    <p>5. 34.95 + 240.016 + 23.98 = ?</p>
+                    <input type="radio" name="q5" value="298.0946">298.0946<br>
+                    <input type="radio" name="q5" value="298.111">298.111<br>
+                    <input type="radio" name="q5" value="298.946">298.946<br>
+                    <input type="radio" name="q5" value="299.09">299.09<br>
+                    <p>6. A car owner buys petrol at Rs.7.50, Rs. 8 and Rs. 8.50 per litre for three successive years. What
+                        approximately is the average cost per litre of petrol if he spends Rs. 4000 each year?</p>
+                    <input type="radio" name="q6" value="7.98">7.98<br>
+                    <input type="radio" name="q6" value="8">8<br>
+                    <input type="radio" name="q6" value="8.50">8.50<br>
+                    <input type="radio" name="q6" value="9">9<br>
+                    <p>7. The captain of a cricket team of 11 members is 26 years old and the wicket keeper is 3 years
+                        older. If the ages of these two are excluded, the average age of the remaining players is one
+                        year less than the average age of the whole team. What is the average age of the team?</p>
+                    <input type="radio" name="q7" value="23 years">23 years<br>
+                    <input type="radio" name="q7" value="24 years">24 years<br>
+                    <input type="radio" name="q7" value="25 years">25 years<br>
+                    <input type="radio" name="q7" value="35 years">35 years<br>
+                    <p>8. The sum of two number is 25 and their difference is 13. Find their product.</p>
+                    <input type="radio" name="q8" value="104">104<br>
+                    <input type="radio" name="q8" value="114">114<br>
+                    <input type="radio" name="q8" value="315">315<br>
+                    <input type="radio" name="q8" value="325">325<br>
+                    <p>9. A man buys a cycle for Rs. 1400 and sells it at a loss of 15%. What is the selling price of the
+                        cycle?</p>
+                    <input type="radio" name="q9" value="1275">1275<br>
+                    <input type="radio" name="q9" value="1202">1202<br>
+                    <input type="radio" name="q9" value="1160">1160<br>
+                    <input type="radio" name="q9" value="1190">1190<br>
+                    <p>
+                        10. Find the greatest number that will divide 43, 91 and 183 so as to leave the same remainder in
+                        each case.</p>
+                    <input type="radio" name="q10" value="4">4<br>
+                    <input type="radio" name="q10" value="7">7<br>
+                    <input type="radio" name="q10" value="9">9<br>
+                    <input type="radio" name="q10" value="13">13<br>
+                    <p>11. Which of the following fraction is the largest ?</p>
+                    <input type="radio" name="q11" value="7/8">7/8<br>
+                    <input type="radio" name="q11" value="13/16">13/16<br>
+                    <input type="radio" name="q11" value="31/40">31/40<br>
+                    <input type="radio" name="q11" value="63/80">63/80<br>
+                    <p>12. The least perfect square, which is divisible by each of 21, 36 and 66 is:</p>
+                    <input type="radio" name="q12" value="213444">213444<br>
+                    <input type="radio" name="q12" value="214344">214344<br>
+                    <input type="radio" name="q12" value="214434">214434<br>
+                    <input type="radio" name="q12" value="231444">231444<br>
+                    <p>
+                        13. If 20% of a = b, then b% of 20 is the same as:</p>
+                    <input type="radio" name="q13" value="4 % of a">4 % of a<br>
+                    <input type="radio" name="q13" value="5 % of a">5 % of a<br>
+                    <input type="radio" name="q13" value="20 % of a">20 % of a<br>
+                    <input type="radio" name="q13" value="none">none of these<br>
+                    <p>14. If A = x% of y and B = y% of x, then which of the following is true?</p>
+                    <input type="radio" name="q14" value="A is smaller than B">A is smaller than B<br>
+                    <input type="radio" name="q14" value="A is greater than B">A is greater than B<br>
+                    <input type="radio" name="q14"
+                        value="relationship between A and B cannot be determined">relationship between A and B cannot be
+                    determined<br>
+                    <input type="radio" name="q14" value="none of this">none of these <br>
+                    <p>15. 3 pumps, working 8 hours a day, can empty a tank in 2 days. How many hours a day must 4 pumps
+                        work to empty the tank in 1 day?</p>
+                    <input type="radio" name="q15" value="9">9<br>
+                    <input type="radio" name="q15" value="10">10<br>
+                    <input type="radio" name="q15" value="11">11<br>
+                    <input type="radio" name="q15" value="12">12<br>
+                    <p>16. One pipe can fill a tank three times as fast as another pipe. If together the two pipes can fill
+                        the tank in 36 minutes, then the slower pipe alone will be able to fill the tank in:</p>
+                    <input type="radio" name="q16" value="81 min">81 min<br>
+                    <input type="radio" name="q16" value="108 min">108 min<br>
+                    <input type="radio" name="q16" value="144 min">144 min<br>
+                    <input type="radio" name="q16" value="192 min">192 min<br>
+                    <p>17. A motorboat, whose speed in 15 km/hr in still water goes 30 km downstream and comes back in a
+                        total of 4 hours 30 minutes. The speed of the stream (in km/hr) is:</p>
+                    <input type="radio" name="q17" value="4">4<br>
+                    <input type="radio" name="q17" value="5">5<br>
+                    <input type="radio" name="q17" value="6">6<br>
+                    <input type="radio" name="q17" value="10">10<br>
+                    <p>18.A man took loan from a bank at the rate of 12% p.a. simple interest. After 3 years he had to pay
+                        Rs. 5400 interest only for the period. The principal amount borrowed by him was:</p>
+                    <input type="radio" name="q18" value="2000">2000<br>
+                    <input type="radio" name="q18" value="10000">10000<br>
+                    <input type="radio" name="q18" value="15000">15000<br>
+                    <input type="radio" name="q18" value="20000">20000<br>
+                    <p>19. A man walked diagonally across a square lot. Approximately, what was the percent saved by not
+                        walking along the edges?</p>
+                    <input type="radio" name="q19" value="20">20<br>
+                    <input type="radio" name="q19" value="29.5">29.5<br>
+                    <input type="radio" name="q19" value="30">30<br>
+                    <input type="radio" name="q19" value="33">33<br>
+                    <p>20. A man buys a watch for Rs. 1950 in cash and sells it for Rs. 2200 at a credit of 1 year. If the
+                        rate of interest is 10% per annum, the man:</p>
+                    <input type="radio" name="q20" value="gains Rs.55">gains Rs.55<br>
+                    <input type="radio" name="q20" value="gains Rs.50">gains Rs.50<br>
+                    <input type="radio" name="q20" value="loses Rs.30">loses Rs.30<br>
+                    <input type="radio" name="q20" value="gains Rs.30">gains Rs.30<br>
+                    <p>21. Find the odd man out."10, 25, 45, 54, 60, 75, 80"</p>
+                    <input type="radio" name="q21" value="10">10<br>
+                    <input type="radio" name="q21" value="45">45<br>
+                    <input type="radio" name="q21" value="54">54<br>
+                    <input type="radio" name="q21" value="75">75<br>
+                    <p>22. Find out the wrong number in the given sequence of numbers.
+                        "36, 54, 18, 27, 9, 18.5, 4.5"
+                    </p>
+                    <input type="radio" name="q22" value="4.5">4.5<br>
+                    <input type="radio" name="q22" value="18.5">18.5<br>
+                    <input type="radio" name="q22" value="54">54<br>
+                    <input type="radio" name="q22" value="18">18<br>
+                    <p>23. Find out the wrong number in the given sequence of numbers."582, 605, 588, 611, 634, 617, 600"
+                    </p>
+                    <input type="radio" name="q23" value="634">634<br>
+                    <input type="radio" name="q23" value="611">611<br>
+                    <input type="radio" name="q23" value="605">605<br>
+                    <input type="radio" name="q23" value="600">600<br>
+                    <p>24. Insert the missing number.
+                        "8, 24, 12, 36, 18, 54, (....)"
+                    </p>
+                    <input type="radio" name="q24" value="27">27<br>
+                    <input type="radio" name="q24" value="108">108<br>
+                    <input type="radio" name="q24" value="68">68<br>
+                    <input type="radio" name="q24" value="72">72<br>
+                    <p>25.In a regular week, there are 5 working days and for each day, the working hours are 8. A man gets
+                        Rs. 2.40 per hour for regular work and Rs. 3.20 per hours for overtime. If he earns Rs. 432 in 4
+                        weeks, then how many hours does he work for ?</p>
+                    <input type="radio" name="q25" value="160">160<br>
+                    <input type="radio" name="q25" value="175">175<br>
+                    <input type="radio" name="q25" value="180">180<br>
+                    <input type="radio" name="q25" value="195">195<br>
+                    <p>26. Find a positive number which when increased by 17 is equal to 60 times the reciprocal of the
+                        number.</p>
+                    <input type="radio" name="q26" value="10">10<br>
+                    <input type="radio" name="q26" value="3">3<br>
+                    <input type="radio" name="q26" value="17">17<br>
+                    <input type="radio" name="q26" value="20">20<br>
+                    <p>27. In a two-digit, if it is known that its unit's digit exceeds its ten's digit by 2 and that the
+                        product of the given number and the sum of its digits is equal to 144, then the number is:</p>
+                    <input type="radio" name="q27" value="24">24<br>
+                    <input type="radio" name="q27" value="26">26<br>
+                    <input type="radio" name="q27" value="42">42<br>
+                    <input type="radio" name="q27" value="46">46<br>
+                    <p>28. Ayesha's father was 38 years of age when she was born while her mother was 36 years old when her
+                        brother four years younger to her was born. What is the difference between the ages of her
+                        parents?</p>
+                    <input type="radio" name="q28" value="2 years">2 years<br>
+                    <input type="radio" name="q28" value="4 years">4 years<br>
+                    <input type="radio" name="q28" value="6 years">6 years<br>
+                    <input type="radio" name="q28" value="8 years">8 years<br>
+                    <p>29. In an election between two candidates, one got 55% of the total valid votes, 20% of the votes
+                        were invalid. If the total number of votes was 7500, the number of valid votes that the other
+                        candidate got, was:</p>
+                    <input type="radio" name="q29" value="2700">2700<br>
+                    <input type="radio" name="q29" value="2900">2900<br>
+                    <input type="radio" name="q29" value="3000">3000<br>
+                    <input type="radio" name="q29" value="3100">3100<br>
+                    <p>A trader mixes 26 kg of rice at Rs. 20 per kg with 30 kg of rice of other variety at Rs. 36 per
+                        kg and sells the mixture at Rs. 30 per kg. His profit percent is:</p>
+                    <input type="radio" name="q30" value="no profit no loss">no profit no loss<br>
+                    <input type="radio" name="q30" value="5%">5%<br>
+                    <input type="radio" name="q30" value="8%">8%<br>
+                    <input type="radio" name="q30" value="10%">10%<br>
+
+
+                </div>
+
+                <!-- PROGRAMMING -->
+                <div id="programming" class="section">
+                    <h2>Programming Test</h2>
+
+                    <p><pre>1. What is the output of the below code 
+
+int i = 0;
+while(i=n){
+if(i%2)break;
+i++;}
+cout--i;
+</pre></p>
+                    <input type="radio" name="q31" value="correct">1<br>
+                    <input type="radio" name="q31" value="wrong">0<br>
+                    <input type="radio" name="q31" value="wrong">n<br>
+                    <input type="radio" name="q31" value="wrong">n-1<br>
+                    <p><pre>2. What does the following C statement mean? 
+                        "scanf("%4s", str);"
+                    </pre></p>
+                    <input type="radio" name="q32" value="correct">Read maximum 4 characters from console.<br>
+                    <input type="radio" name="q32" value="wrong">Read exactly 4 characters from console.<br>
+                    <input type="radio" name="q32" value="wrong">Read a string str in multiples of 4<br>
+                    <input type="radio" name="q32" value="wrong">None<br>
+                    <p><pre>3. Which of the following is true?
+</pre></p>
+                    <input type="radio" name="q33" value="correct">gets() doesn't do any array bound testing and should not be used. <br>
+                    <input type="radio" name="q33" value="wrong">fgets() should be used in place of gets() only for files, otherwise gets() is fine<br>
+                    <input type="radio" name="q33" value="wrong">gets() cannot read strings with spaces<br>
+                    <input type="radio" name="q33" value="wrong">None<br>
+                    <p><pre>4. Predict the output?
+
+
+int fun(char *str1)
+{
+    char *str2 = str1;
+    while (*++str1)
+        ;
+    return (str1 - str2);
+}
+int main()
+{
+    char *str = "GeeksQuiz";
+    printf("%d", fun(str));
+    return 0;
+}</pre></p>
+                    <input type="radio" name="q34" value="correct">9<br>
+                    <input type="radio" name="q34" value="wrong">10<br>
+                    <input type="radio" name="q34" value="wrong">8<br>
+                    <input type="radio" name="q34" value="wrong">random number<br>
+                    <p>5. When a copy constructor may be called?</p>
+                    <input type="radio" name="q35" value="wrong">When an object of the class is returned by value.<br>
+                    <input type="radio" name="q35" value="wrong">When an object of the class is returned by value.<br>
+                    <input type="radio" name="q35" value="wrong">When an object is constructed based on another object of the same class<br>
+                    <input type="radio" name="q35" value="correct">all of the above<br>
+                    <p><pre>6. 'C' Language can be used in ?</pre></p>
+                    <input type="radio" name="q36" value="correct">Both System Software and Embedded Systems<br>
+                    <input type="radio" name="q36" value="wrong">Only System Software<br>
+                    <input type="radio" name="q36" value="wrong">Only Embedded Systems<br>
+                    <input type="radio" name="q36" value="wrong">None<br>
+                    <p><pre>7. "Why is the & (address-of) operator used with scanf() when reading integer values?</pre></p>
+                    <input type="radio" name="q37" value="correct">To store the input at the variable’s memory address.<br>
+                    <input type="radio" name="q37" value="wrong">To specify the format of the input.<br>
+                    <input type="radio" name="q37" value="wrong">to perform pointer arithmetic.<br>
+                    <input type="radio" name="q37" value="wrong">None<br>
+                    <p><pre>8. Which of the following is the standard input stream in C?</pre></p>
+                    <input type="radio" name="q38" value="wrong">stdout<br>
+                    <input type="radio" name="q38" value="correct">
+stdin<br>
+                    <input type="radio" name="q38" value="wrong">stdln<br>
+                    <input type="radio" name="q38" value="wrong">None<br>
+                    <p><pre>9. Which of the following is true</pre></p>
+                    <input type="radio" name="q39" value="correct">gets() can read a string with spaces but a normal scanf() with %s can not.<br>
+                    <input type="radio" name="q39" value="wrong">gets() can always replace scanf() without any additional code.<br>
+                    <input type="radio" name="q39" value="wrong">gets() can read a string with newline characters but a normal scanf() with %s can not.<br>
+                    <input type="radio" name="q39" value="wrong">None<br>
+                    <p>10. Normally user programs are prevented from handling I/O directly by I/O instructions in them. For CPUs having explicit I/O instructions, such I/O protection is ensured by having the I/O instructions privileged. In a CPU with memory mapped I/O, there is no explicit I/O instruction. Which one of the following is true for a CPU with memory mapped I/O?</p>
+                    <input type="radio" name="q40" value="correct">I/O protection is ensured by operating system routine (s)<br>
+                    <input type="radio" name="q40" value="wrong">I/O protection is ensured by a hardware trap<br>
+                    <input type="radio" name="q40" value="wrong">I/O protection is not possible<br>
+                    <input type="radio" name="q40" value="wrong">None<br>
+                    <p>11. What is the value returned by the function f given below when n = 100? int f (int n) { if (n = = 0) then return n; else return n + f(n-2); }</p>
+                    <input type="radio" name="q41" value="correct">2550<br>
+                    <input type="radio" name="q41" value="wrong">2556<br>
+                    <input type="radio" name="q41" value="wrong">5220<br>
+                    <input type="radio" name="q41" value="wrong">None<br>
+                    <p>12. What is the purpose of %n in scanf()?</p>
+                    <input type="radio" name="q42" value="correct">To count and store the number of characters read so far<br>
+                    <input type="radio" name="q42" value="wrong">To read a number and store it in a variable<br>
+                    <input type="radio" name="q42" value="wrong">To skip over newline characters<br>
+                    <input type="radio" name="q42" value="wrong">None<br>
+                    <p>13.Consider the following program fragment i=6720; j=4; while (i%j)==0 { i=i/j; j=j+1; } On termination j will have the value</p>
+                    <input type="radio" name="q43" value="correct">9<br>
+                    <input type="radio" name="q43" value="wrong">8<br>
+                    <input type="radio" name="q43" value="wrong">4<br>
+                    <input type="radio" name="q43" value="wrong">None<br>
+                    <p>14. Which of the following statement is correct for switch controlling expression?</p>
+                    <input type="radio" name="q44" value="correct">Both int and char can be used in “switch” control expression.<br>
+                    <input type="radio" name="q44" value="wrong">Only int can be used in “switch” control expression.<br>
+                    <input type="radio" name="q44" value="wrong">All types i.e. int, char and float can be used in “switch” control expression.<br>
+                    <input type="radio" name="q44" value="wrong">None<br>
+                    <p>15. In the context of "break" and "continue" statements in C, pick the best statement.</p>
+                    <input type="radio" name="q45" value="correct">“break” and “continue” can be used in “for”, “while” and “do-while” loop body. But only “break” can be used in “switch” body.<br>
+                    <input type="radio" name="q45" value="wrong">“continue” can be used in “for”, “while” and “do-while” loop body.<br>
+                    <input type="radio" name="q45" value="wrong">“break” can be used in “for”, “while” and “do-while” loop body.<br>
+                    <input type="radio" name="q45" value="wrong">None<br>
+                    <p>16. Which of the following is correct with respect to “Jump Statements” in C?</p>
+                    <input type="radio" name="q46" value="wrong">goto<br>
+                    <input type="radio" name="q46" value="wrong">continue<br>
+                    <input type="radio" name="q46" value="wrong">break<br>
+                    <input type="radio" name="q46" value="correct">all of the above<br>
+                    <p>17. In C++, which system - provided function is called when no handler is provided to deal with an exception?</p>
+                    <input type="radio" name="q47" value="correct">terminate ( )<br>
+                    <input type="radio" name="q47" value="wrong">unexpected ( )<br>
+                    <input type="radio" name="q47" value="wrong">abort ( )<br>
+                    <input type="radio" name="q47" value="wrong">None<br>
+                    <p>18. In _______, the bodies of the two loops are merged together to form a single loop provided that they do not make any references to each other.</p>
+                    <input type="radio" name="q48" value="correct">Loop jamming<br>
+                    <input type="radio" name="q48" value="wrong">Loop controlling<br>
+                    <input type="radio" name="q48" value="wrong">Strength reduction<br>
+                    <input type="radio" name="q48" value="wrong">None<br>
+                    <p>19. Which switch statement handles a variable day (1-7) correctly?</p>
+                    <input type="radio" name="q49" value="correct">switch(day) { case 1: printf("Monday"); break; }<br>
+                    <input type="radio" name="q49" value="wrong">switch(day) { case 1: printf("Monday"); }<br>
+                    <input type="radio" name="q49" value="wrong">switch(day) { 1: printf("Monday"); break; }<br>
+                    <input type="radio" name="q49" value="wrong">None<br>
+                    <p>20. What does the continue statement do in a loop?</p>
+                    <input type="radio" name="q50" value="correct">Skips to the next iteration<br>
+                    <input type="radio" name="q50" value="wrong">Restarts the loop<br>
+                    <input type="radio" name="q50" value="wrong">Exits the loop entirely <br>
+                    <input type="radio" name="q50" value="wrong">None<br>
+
+                </div>
+
+                <!-- MIXED -->
+                <div id="mixed" class="section">
+                    <h2>Mixed Test</h2>
+
+                    <p>1. What is Digital Image Processing?</p>
+                    <input type="radio" name="q51" value="correct">It’s a software that allows altering digital pictures<br>
+                    <input type="radio" name="q51" value="Mumbai"> It’s an application that alters digital videos<br>
+                    <input type="radio" name="q51" value="wrong">It’s a system that manipulates digital medias<br>
+                    <input type="radio" name="q51" value="wrong">None<br>
+                    <p>2.Which of the following process helps in Image enhancement?</p>
+                    <input type="radio" name="q52" value="wrong">Digital Image Processing<br>
+                    <input type="radio" name="q52" value="wrong">Analog Image Processing<br>
+                    <input type="radio" name="q52" value="correct"> Both a and b<br>
+                    <input type="radio" name="q52" value="wrong">None<br>
+                    <p>3.What is computer architecture?</p>
+                    <input type="radio" name="q53" value="correct">set of principles and methods that specify the functioning, organisation, and implementation of computer systems<br>
+                    <input type="radio" name="q53" value="wrong">set of categories and methods that specify the functioning, organisation, and implementation of computer systems<br>
+                    <input type="radio" name="q53" value="wrong">set of functions and methods that specify the functioning, organisation, and implementation of computer systems<br>
+                    <input type="radio" name="q53" value="wrong">None<br>
+                    <p>4.What is computer organization?</p>
+                    <input type="radio" name="q54" value="correct">structure and behaviour of a computer system as observed by the user<br>
+                    <input type="radio" name="q54" value="wrong">structure of a computer system as observed by the developer<br>
+                    <input type="radio" name="q54" value="wrong">both<br>
+                    <input type="radio" name="q54" value="wrong">None<br>
+                    <p>5.Which of the following is an iterative method?</p>
+                    <input type="radio" name="q55" value="correct">Gauss Jordan<br>
+                    <input type="radio" name="q55" value="wrong">Gauss Siedal<br>
+                    <input type="radio" name="q55" value="wrong">Gauss elimination<br>
+                    <input type="radio" name="q55" value="wrong">None<br>
+                    <p>6.Numerical techniques more commonly involve _______</p>
+                    <input type="radio" name="q56" value="correct">Iterative method<br>
+                    <input type="radio" name="q56" value="wrong">Elimination method<br>
+                    <input type="radio" name="q56" value="wrong">Direct method<br>
+                    <input type="radio" name="q56" value="wrong">None<br>
+                    <p>7.Errors may occur in performing numerical computation on the computer due to which of the following reasons?</p>
+                    <input type="radio" name="q57" value="correct">Rounding errors<br>
+                    <input type="radio" name="q57" value="wrong">Operator fatigue<br>
+                    <input type="radio" name="q57" value="wrong">Back substitution<br>
+                    <input type="radio" name="q57" value="wrong">None<br>
+                    <p>8.What is MySQL?</p>
+                    <input type="radio" name="q58" value="correct">A relational database management system (RDBMS)<br>
+                    <input type="radio" name="q58" value="wrong">An operating system<br>
+                    <input type="radio" name="q58" value="wrong">A web server<br>
+                    <input type="radio" name="q58" value="wrong">None<br>
+                    <p>9.What does “MySQL” stand for?</p>
+                    <input type="radio" name="q59" value="correct">My Structured Query Language<br>
+                    <input type="radio" name="q59" value="wrong">My Sequence Query Language<br>
+                    <input type="radio" name="q59" value="wrong">My Structured Questioning Language<br>
+                    <input type="radio" name="q59" value="wrong">None<br>
+                    <p>10.What is Cloud Computing?</p>
+                    <input type="radio" name="q60" value="correct">Cloud Computing means providing services like storage, servers, database, networking, etc<br>
+                    <input type="radio" name="q60" value="wrong">Cloud Computing means storing data in a database<br>
+                    <input type="radio" name="q60" value="wrong">Cloud Computing is a tool used to create an application<br>
+                    <input type="radio" name="q60" value="wrong">None<br>
+                    <p>11.Who is the father of cloud computing?</p>
+                    <input type="radio" name="q61" value="correct"> J.C.R. Licklider<br>
+                    <input type="radio" name="q61" value="wrong">Sharon B. Codd<br>
+                    <input type="radio" name="q61" value="wrong">Edgar Frank Codd<br>
+                    <input type="radio" name="q61" value="wrong">None<br>
+                    <p>12.What does cyber security protect?</p>
+                    <input type="radio" name="q62" value="correct">Cyber security protects internet-connected systems<br>
+                    <input type="radio" name="q62" value="wrong">Cyber security protects internet<br>
+                    <input type="radio" name="q62" value="wrong">Cyber security protects systems<br>
+                    <input type="radio" name="q62" value="wrong">None<br>
+                    <p>13.Who is the father of computer security?</p>
+                    <input type="radio" name="q63" value="correct">August Kerckhoffs<br>
+                    <input type="radio" name="q63" value="wrong">Bob Thomas<br>
+                    <input type="radio" name="q63" value="wrong">Charles<br>
+                    <input type="radio" name="q63" value="wrong">None<br>
+                    <p>14.What is data science primarily concerned with?</p>
+                    <input type="radio" name="q64" value="correct">Analyzing and interpreting data<br>
+                    <input type="radio" name="q64" value="wrong">Collecting data only<br>
+                    <input type="radio" name="q64" value="wrong">Storing data in databasementionedabove<br>
+                    <input type="radio" name="q64" value="wrong">None<br>
+                    <p>15.Which of the following is one of the key data science skills?</p>
+                    <input type="radio" name="q65" value="wrong">Data Visualization<br>
+                    <input type="radio" name="q65" value="wrong">Machine Learning<br>
+                    <input type="radio" name="q65" value="wrong">Statistics<br>
+                    <input type="radio" name="q65" value="correct">All of the above<br>
+                    <p>16.Which of the following is NOT a type of machine learning?</p>
+                    <input type="radio" name="q66" value="correct">Computational learning<br>
+                    <input type="radio" name="q66" value="wrong">Reinforcement learning<br>
+                    <input type="radio" name="q66" value="wrong">Unsupervised learning<br>
+                    <input type="radio" name="q66" value="wrong">None<br>
+                    <p>17.What is CSS?</p>
+                    <input type="radio" name="q67" value="correct">cascade style sheet<br>
+                    <input type="radio" name="q67" value="wrong">cascade sheet style<br>
+                    <input type="radio" name="q67" value="wrong">comic style sheet<br>
+                    <input type="radio" name="q67" value="wrong">None<br>
+                    <p>18.HTML stands for?</p>
+                    <input type="radio" name="q68" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q68" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q68" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q68" value="wrong">None<br>
+                    <p>19.HTML stands for?</p>
+                    <input type="radio" name="q69" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q69" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q69" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q69" value="wrong">None<br>
+                    <p>20.HTML stands for?</p>
+                    <input type="radio" name="q70" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q70" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q70" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q70" value="wrong">None<br>
+
+                </div>
+                <!-- reasoning -->
+                <div id="reasoning" class="section">
+                    <h2>Reasoning Test</h2>
+
+                    <p>Capital of India?</p>
+                    <input type="radio" name="q71" value="Delhi">Delhi<br>
+                    <input type="radio" name="q71" value="Mumbai">Mumbai<br>
+                    <input type="radio" name="q71" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q71" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q72" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q72" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q72" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q72" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q73" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q73" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q73" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q73" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q74" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q74" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q74" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q74" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q75" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q75" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q75" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q75" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q76" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q76" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q76" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q76" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q77" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q77" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q77" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q77" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q78" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q78" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q78" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q78" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q79" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q79" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q79" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q79" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q80" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q80" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q80" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q80" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q81" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q81" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q81" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q81" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q82" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q82" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q82" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q82" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q83" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q83" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q83" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q83" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q84" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q84" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q84" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q84" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q85" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q85" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q85" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q85" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q86" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q86" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q86" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q86" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q87" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q87" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q87" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q87" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q88" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q88" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q88" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q88" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q89" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q89" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q89" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q89" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q90" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q90" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q90" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q90" value="wrong">None<br>
+
+                </div>
+                <!-- verbal -->
+                <div id="verbal" class="section">
+                    <h2>Verbal Test</h2>
+
+                    <p>Capital of India?</p>
+                    <input type="radio" name="q91" value="Delhi">Delhi<br>
+                    <input type="radio" name="q91" value="Mumbai">Mumbai<br>
+                    <input type="radio" name="q91" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q91" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q92" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q92" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q92" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q92" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q93" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q93" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q93" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q93" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q94" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q94" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q94" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q94" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q95" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q95" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q95" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q95" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q96" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q96" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q96" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q96" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q97" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q97" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q97" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q97" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q98" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q98" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q98" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q98" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q99" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q99" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q99" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q99" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q100" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q100" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q100" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q100" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q101" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q101" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q101" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q101" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q102" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q102" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q102" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q102" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q103" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q103" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q103" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q103" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q104" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q104" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q104" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q104" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q105" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q105" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q105" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q105" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q106" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q106" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q106" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q106" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q107" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q107" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q107" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q107" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q108" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q108" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q108" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q108" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q109" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q109" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q109" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q109" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q110" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q110" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q110" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q110" value="wrong">None<br>
+
+                </div>
+                <!-- full -->
+                <div id="full" class="section">
+                    <h2>Full Test</h2>
+
+                    <p>Capital of India?</p>
+                    <input type="radio" name="q111" value="Delhi">Delhi<br>
+                    <input type="radio" name="q111" value="Mumbai">Mumbai<br>
+                    <input type="radio" name="q111" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q111" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q112" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q112" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q112" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q112" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q113" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q113" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q113" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q113" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q114" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q114" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q114" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q114" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q115" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q115" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q115" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q115" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q116" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q116" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q116" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q116" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q117" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q117" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q117" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q117" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q118" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q118" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q118" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q118" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q119" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q119" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q119" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q119" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q120" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q120" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q120" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q120" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q121" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q121" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q121" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q121" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q122" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q122" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q122" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q122" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q123" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q123" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q123" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q123" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q124" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q124" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q124" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q124" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q125" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q125" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q125" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q125" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q126" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q126" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q126" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q126" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q127" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q127" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q127" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q127" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q128" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q128" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q128" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q128" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q129" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q129" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q129" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q129" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q130" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q130" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q130" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q130" value="wrong">None<br>
+
+                </div>
+
+                <!-- Quant -->
+                <div id="quant" class="section">
+                    <h2>Quant Test</h2>
+
+                    <p>Capital of India?</p>
+                    <input type="radio" name="q131" value="Delhi">Delhi<br>
+                    <input type="radio" name="q131" value="Mumbai">Mumbai<br>
+                    <input type="radio" name="131" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q131" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q132" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q132" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q132" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q132" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q133" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q133" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q133" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q133" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q134" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q134" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q134" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q134" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q135" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q135" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q135" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q135" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q136" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q136" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q136" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q136" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q137" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q137" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q137" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q137" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q138" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q138" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q138" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q138" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q139" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q139" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q139" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q139" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q140" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q140" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q140" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q140" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q141" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q141" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q141" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q141" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q142" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q142" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q142" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q142" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q143" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q143" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q143" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q143" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q144" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q144" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q144" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q144" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q145" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q145" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q145" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q145" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q146" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q146" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q146" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q146" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q147" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q147" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q147" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q147" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q148" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q148" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q148" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q148" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q149" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q149" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q149" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q149" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q150" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q150" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q150" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q150" value="wrong">None<br>
+
+                </div>
+                <!-- logical  -->
+                <div id="logical" class="section">
+                    <h2>Logical Test</h2>
+
+                    <p>Capital of India?</p>
+                    <input type="radio" name="q151" value="Delhi">Delhi<br>
+                    <input type="radio" name="q151" value="Mumbai">Mumbai<br>
+                    <input type="radio" name="q151" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q151" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q152" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q152" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q152" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q152" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q153" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q153" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q153" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q153" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q154" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q154" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q154" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q154" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q155" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q155" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q155" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q155" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q156" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q156" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q156" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q156" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q157" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q157" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q157" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q157" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q158" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q158" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q158" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q158" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q159" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q159" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q159" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q159" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q160" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q160" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q160" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q160" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q161" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q161" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q161" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q161" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q162" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q162" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q162" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q162" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q163" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q163" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q163" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q163" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q164" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q164" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q164" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q164" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q165" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q165" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q165" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q165" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q166" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q166" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q166" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q166" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q167" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q167" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q167" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q167" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q168" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q168" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q168" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q168" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q169" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q169" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q169" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q169" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q170" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q170" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q170" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q170" value="wrong">None<br>
+
+                </div>
+                <!-- technical -->
+                <div id="technical" class="section">
+                    <h2>Technical Test</h2>
+
+                    <p>Capital of India?</p>
+                    <input type="radio" name="q171" value="Delhi">Delhi<br>
+                    <input type="radio" name="q171" value="Mumbai">Mumbai<br>
+                    <input type="radio" name="q171" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q171" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q172" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q172" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q172" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q172" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q173" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q173" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q173" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q173" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q174" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q174" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q174" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q174" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q175" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q175" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q175" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q175" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q176" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q176" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q176" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q176" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q177" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q177" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q177" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q177" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q178" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q178" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q178" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q178" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q179" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q179" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q179" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q179" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q180" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q180" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q180" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q180" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q181" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q181" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q181" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q181" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q182" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q182" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q182" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q182" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q183" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q183" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q183" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q183" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q184" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q184" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q184" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q184" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q185" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q185" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q185" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q185" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q186" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q186" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q186" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q186" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q187" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q187" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q187" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q187" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q188" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q188" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q188" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q188" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q189" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q189" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q189" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q189" value="wrong">None<br>
+                    <p>HTML stands for?</p>
+                    <input type="radio" name="q190" value="correct">Hyper Text Markup Language<br>
+                    <input type="radio" name="q190" value="wrong">Higher Text Markup Language<br>
+                    <input type="radio" name="q190" value="wrong">Highest Text Markup Language<br>
+                    <input type="radio" name="q190" value="wrong">None<br>
+
+                </div>
+
+                <button type="submit">Submit Quiz</button>
+
+            </form>
+
+        </div>
+    </div>
+
+    <script>
+        const type = localStorage.getItem("quizType");
+
+        // show selected section
+        document.getElementById(type)?.classList.add("active");
+
+        document.getElementById("quizForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+
+            let score = 0;
+
+            const answers = {
+                q1: "4",
+                q2: "2400",
+                q3: "13",
+                q4: "3",
+                q5: "298.946",
+                q6: "7.98",
+                q7: "23 years",
+                q8: "114",
+                q9: "1190",
+                q10: "4",
+                q11: "7/8",
+                q12: "213444",
+                q13: "4 % of a",
+                q14: "none of this",
+                q15: "12",
+                q16: "144 min",
+                q17: "5",
+                q18: "15000",
+                q19: "29.5",
+                q20: "gains Rs.50",
+                q21: "54",
+                q22: "18.5",
+                q23: "634",
+                q24: "27",
+                q25: "175",
+                q26: "3",
+                q27: "24",
+                q28: "6 years",
+                q29: "2700",
+                q30: "5%",
+                q31: "" 
+            };
+
+            const formData = new FormData(this);
+
+            for (let key in answers) {
+                if (formData.get(key) === answers[key]) {
+                    score++;
+                }
+            }
+
+            localStorage.setItem("score", score);
+
+            saveResult(score);
+        });
+
+        function saveResult(score) {
+            const email = localStorage.getItem("userEmail");
+            const quiz = localStorage.getItem("quizType");
+
+            fetch("http://localhost:5000/save-result", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, quiz_name: quiz, score })
+            })
+                .then(res => res.json())
+                .then(() => {
+                    window.location.href = "result.html"; // ✅ FIXED
+                })
+                .catch(() => {
+                    // even if backend fails → still redirect
+                    window.location.href = "result.html";
+                });
+            function saveResult(score) {
+                console.log("Function called");  // 👈 ADD THIS
+
+                const email = localStorage.getItem("userEmail");
+                const quiz = localStorage.getItem("quizType");
+
+                console.log(email, quiz, score); // 👈 ADD THIS
+
+                fetch("http://localhost:5000/save-result", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email, quiz_name: quiz, score })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log("Response:", data); // 👈 ADD THIS
+                        window.location.href = "result.html";
+                    })
+                    .catch(err => {
+                        console.log("ERROR:", err); // 👈 ADD THIS
+                        window.location.href = "result.html";
+                    });
+            }
+        }
+        const user = localStorage.getItem("userEmail");
+
+        if (!user) {
+            alert("Unauthorized access! Please login.");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+
+</html>

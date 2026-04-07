@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Register - PlacePrep</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<style>
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">PlacePrep Pro</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aptitude.html">Notes</a></li>
+        <li><a href="quiz-options.html">Quiz</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<!-- Background blobs -->
+<div class="blob"></div>
+<div class="blob"></div>
+<div class="blob"></div>
+
+<!-- Register Card -->
+<div class="login-container">
+    <h2>Create Account</h2>
+    <br>
+
+    <!-- Role Selection -->
+    <div class="role-selector">
+        <div class="role active" onclick="selectRole(this, 'student')">Student</div>
+        <div class="role" onclick="selectRole(this, 'admin')">Admin</div>
+        <div class="role" onclick="selectRole(this, 'teacher')">Teacher</div>
+    </div>
+
+    <form id="registerForm">
+
+        <div class="input-box">
+            <input type="text" required>
+            <label>Full Name</label>
+        </div>
+
+        <div class="input-box">
+            <input type="email" required>
+            <label>Email</label>
+        </div>
+
+        <!-- Dynamic Fields -->
+        <div id="dynamicFields">
+
+            <!-- Default Student Fields -->
+            <div class="input-box student-field">
+                <input type="text" required>
+                <label>College Name</label>
+            </div>
+
+            <div class="input-box student-field">
+                <input type="text" required>
+                <label>Course (BCA, MCA, etc.)</label>
+            </div>
+
+        </div>
+
+        <div class="input-box">
+            <input type="password" required>
+            <label>Password</label>
+        </div>
+
+        <button type="submit" class="login-btn">Register</button>
+    </form>
+
+    <div class="extra">
+        <p>Already have an account? <a href="login.html">Login</a></p>
+    </div>
+</div>
+
+<script>
+let selectedRole = "student";
+
+function selectRole(element, role) {
+    document.querySelectorAll(".role").forEach(el => el.classList.remove("active"));
+    element.classList.add("active");
+    selectedRole = role;
+}
+
+document.getElementById("registerForm").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    const inputs = document.querySelectorAll("#registerForm input");
+
+    const name = inputs[0].value;
+    const email = inputs[1].value;
+    const college = inputs[2].value;
+    const course = inputs[3].value;
+    const password = inputs[4].value;
+
+    fetch("http://localhost:5000/register", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            name,
+            email,
+            password,
+            role: selectedRole,
+            college,
+            course
+        })
+    })
+    .then(res => res.json())
+    .then(data => {
+        alert("Registered successfully");
+
+        if (data === "Registered successfully") {
+            window.location.href = "login.html";
+        }
+    });
+});
+</script>
+
+</body>
+</html>

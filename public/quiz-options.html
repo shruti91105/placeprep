@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Quiz - PlacePrep Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* Layout */
+.main{
+    padding-top:100px;
+    text-align:center;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:25px;
+    padding:10px;
+}
+
+/* GLASS CARD */
+.card{
+    height:170px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:18px;
+    font-weight:bold;
+    color:rgb(27, 36, 196);
+    cursor:pointer;
+    position:relative;
+    z-index:1;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border:1px solid rgba(255,255,255,0.2);
+}
+
+/* MOVING WHITE BORDER */
+.card::before{
+    content:"";
+    position:absolute;
+    inset:-2px;
+    border-radius:20px;
+    background: linear-gradient(90deg, #ffffff, #cccccc, #ffffff);
+    background-size:200%;
+    animation:borderMove 3s linear infinite;
+    z-index:-2;
+}
+
+/* inner overlay */
+.card::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:20px;
+    background: rgba(255,255,255,0.08);
+    z-index:-1;
+}
+
+@keyframes borderMove{
+    0%{background-position:0%}
+    100%{background-position:200%}
+}
+
+/* Hover */
+.card:hover{
+    transform: translateY(-5px) scale(1.03);
+    transition:0.3s;
+}
+
+/* Heading */
+h1{
+    color:white;
+    letter-spacing:1px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">PlacePrep Pro</div>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="aptitude.html">Notes</a></li>
+        <li><a href="#">Quiz</a></li>
+        <li><a href="login.html">Login</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<div class="main">
+    <h1>Select Quiz</h1>
+
+    <div class="cards">
+
+        <div class="card" onclick="startQuiz('aptitude')">Aptitude</div>
+        <div class="card" onclick="startQuiz('programming')">Programming</div>
+        <div class="card" onclick="startQuiz('reasoning')">Reasoning</div>
+
+        <div class="card" onclick="startQuiz('verbal')">Verbal</div>
+        <div class="card" onclick="startQuiz('mixed')">Mixed Test</div>
+        <div class="card" onclick="startQuiz('full')">Full Test</div>
+
+        <div class="card" onclick="startQuiz('quant')">Quant</div>
+        <div class="card" onclick="startQuiz('logical')">Logical</div>
+        <div class="card" onclick="startQuiz('technical')">Technical</div>
+
+    </div>
+</div>
+
+<script>
+function startQuiz(type){
+    localStorage.setItem("quizType", type);
+    window.location.href = "quiz.html";
+}
+const user = localStorage.getItem("userEmail");
+
+if(!user){
+    alert("Please login first!");
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>

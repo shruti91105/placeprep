@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Dashboard - PlacePrep Pro</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    margin:0;
+    font-family: Arial;
+    background: linear-gradient(-45deg, #667eea, #764ba2, #00c6ff, #0072ff);
+    background-size:400% 400%;
+    animation:gradientMove 10s ease infinite;
+    color:white;
+}
+
+/* Container */
+.dashboard{
+    padding:30px;
+}
+
+/* Card Design */
+.card{
+    background:white;
+    color:black;
+    padding:20px;
+    margin:15px 0;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+.btn{
+    padding:10px 20px;
+    border:none;
+    border-radius:8px;
+    background:#667eea;
+    color:white;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#5a67d8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <h1>Welcome, <span id="userName"></span> 👋</h1>
+
+    <div class="card">
+        <h3>Your Info</h3>
+        <p>Email: <span id="userEmail"></span></p>
+        <p>Role: <span id="userRole"></span></p>
+    </div>
+
+    <!-- STUDENT PANEL -->
+    <div id="studentPanel" class="card" style="display:none;">
+        <h3>Student Dashboard</h3>
+        <button class="btn" onclick="startQuiz()">Take Quiz</button>
+        <p>Your Marks: <span id="marks">0</span></p>
+    </div>
+
+    <!-- TEACHER PANEL -->
+    <div id="teacherPanel" class="card" style="display:none;">
+        <h3>Teacher Dashboard</h3>
+        <p>Total Students: <span id="totalStudents"></span></p>
+        <p>Average Marks: <span id="avgMarks"></span></p>
+    </div>
+
+    <!-- ADMIN PANEL -->
+    <div id="adminPanel" class="card" style="display:none;">
+        <h3>Admin Dashboard</h3>
+        <textarea id="announcement" placeholder="Write announcement..."></textarea><br>
+        <button class="btn" onclick="saveAnnouncement()">Post Announcement</button>
+        <p id="showAnnouncement"></p>
+    </div>
+
+</div>
+
+<script>
+
+// GET USER DATA
+let user = JSON.parse(localStorage.getItem("loggedInUser"));
+
+if(!user){
+    window.location.href = "login.html";
+}
+
+// DISPLAY USER INFO
+document.getElementById("userName").innerText = user.name;
+document.getElementById("userEmail").innerText = user.email;
+document.getElementById("userRole").innerText = user.role;
+
+// SHOW ROLE PANEL
+if(user.role === "student"){
+    document.getElementById("studentPanel").style.display = "block";
+}
+else if(user.role === "teacher"){
+    document.getElementById("teacherPanel").style.display = "block";
+}
+else if(user.role === "admin"){
+    document.getElementById("adminPanel").style.display = "block";
+}
+
+// QUIZ FUNCTION
+function startQuiz(){
+    let marks = Math.floor(Math.random() * 100);
+    document.getElementById("marks").innerText = marks;
+
+    let allMarks = JSON.parse(localStorage.getItem("marksData")) || [];
+    allMarks.push(marks);
+    localStorage.setItem("marksData", JSON.stringify(allMarks));
+}
+
+// TEACHER DATA
+let marksData = JSON.parse(localStorage.getItem("marksData")) || [];
+document.getElementById("totalStudents").innerText = marksData.length;
+
+let avg = 0;
+if(marksData.length > 0){
+    avg = marksData.reduce((a,b)=>a+b,0)/marksData.length;
+}
+document.getElementById("avgMarks").innerText = avg.toFixed(2);
+
+// ADMIN ANNOUNCEMENT
+function saveAnnouncement(){
+    let text = document.getElementById("announcement").value;
+    localStorage.setItem("announcement", text);
+    document.getElementById("showAnnouncement").innerText = text;
+}
+
+// LOAD ANNOUNCEMENT
+document.getElementById("showAnnouncement").innerText = localStorage.getItem("announcement");
+
+</script>
+
+</body>
+</html>
